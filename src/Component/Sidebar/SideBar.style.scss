@@ -1,0 +1,85 @@
+@import '../../Sass/mixin';
+.side-bar {
+    @include center-item;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #6c5ce7;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0.5rem 1rem 2.8rem rgba(0, 0, 0, 0.38);
+    @media screen and (min-width: 1100px) {
+        width: 30%;
+        height: 80%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title {
+        font-size: 3rem;
+        font-weight: 300;
+        letter-spacing: 0.5rem;
+        margin-bottom: 2rem;
+        display: none;
+        @media screen and (min-width: 1100px) {
+            display: block;
+        }
+    }
+    &__img {
+        width: 10rem;
+        height: 10rem;
+        display: inline-block;
+        transition: all 0.5s linear;
+        @media screen and (min-width: 1100px) {
+            width: 18rem;
+            height: 18rem;
+        }
+    }
+    &__button {
+        order: 1;
+        cursor: pointer;
+        padding: 1.4rem 2.8rem;
+        border-radius: 3rem;
+        border: none;
+        box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.38);
+        outline: none;
+        font-size: 1.8rem;
+        font-weight: 400;
+        word-spacing: 1rem;
+        font-family: inherit;
+        color: #fff;
+        background: linear-gradient(
+            135deg,
+            rgb(33, 211, 211) 0%,
+            rgb(33, 211, 211) 50%,
+            rgb(235, 54, 132) 50%,
+            rgb(235, 54, 132) 100%
+        );
+        transition: all 0.4s;
+        &:active {
+            box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.18);
+        }
+        &:hover ~ .side-bar__img {
+            animation: moveImg 1s linear;
+        }
+    }
+}
+@keyframes moveImg {
+    0% {
+        transform: translatex(-3px);
+    }
+    20% {
+        transform: translatey(-3px);
+    }
+    40% {
+        transform: translatex(6px);
+    }
+    60% {
+        transform: translatey(6px);
+    }
+    80% {
+        transform: translatex(0px);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}

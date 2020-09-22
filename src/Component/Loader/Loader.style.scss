@@ -1,0 +1,49 @@
+@import '../../Sass/mixin';
+
+.loader {
+      @include center-item;
+      flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+      right: 0;
+      background: rgba(000,000,000,.1);
+	&__container {
+		width: 13rem;
+		height: 13rem;
+		animation: loader 1s infinite cubic-bezier(.36, .68, .36, .68);
+      }
+      &__text {
+            font-size: 2.6rem;
+            color: #fff;
+            margin: 2rem 0;
+            &::after {
+                  content: '';
+                  animation: text 2s linear infinite;
+            }
+      }
+	&__img {
+		width: 100%;
+		height: 100%;
+	}
+}
+@keyframes text {
+      33%{
+            content: '.';
+      }
+      66%{
+            content: '..';
+      }
+      99%{
+            content: '...';
+      }
+}
+@keyframes loader {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

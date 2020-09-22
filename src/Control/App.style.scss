@@ -1,0 +1,13 @@
+@import '../Sass/mixin';
+.App {
+      @include center-item;
+      height: 100vh;
+      background: rgb(114,17,180);
+      background: linear-gradient(
+            135deg, 
+            rgb(33, 211, 211) 0%,
+            rgb(33, 211, 211) 50%, 
+            rgb(235, 54, 132) 50%, 
+            rgb(235, 54, 132) 100%
+      );
+}

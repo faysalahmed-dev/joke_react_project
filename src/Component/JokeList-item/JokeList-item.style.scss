@@ -1,0 +1,49 @@
+@import '../../Sass/mixin';
+.joke-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    &:not(:last-child) {
+        border-bottom: 2px solid #eee;
+    }
+    &__text {
+        width: 75%;
+        font-size: 1.7rem;
+        margin-left: 1rem;
+    }
+    &__votes {
+        @include center-item;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 1.8rem;
+        font-weight: 300;
+        border: 0.3rem solid;
+        box-shadow: 0 0.8rem 1rem rgba(000, 000, 000, 0.3);
+    }
+    &__button {
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin: 0 0.7rem;
+        &.up:hover {
+            transform: translatey(-4px) scale(1.1);
+        }
+        &.down:hover {
+            transform: translatey(4px) scale(1.1);
+        }
+    }
+    &__icon {
+        width: 1.4rem;
+        height: 1.4rem;
+        display: inline-block;
+    }
+    &__emoji {
+        font-size: 2rem;
+        margin-left: auto;
+        padding: 0 1rem;
+    }
+}

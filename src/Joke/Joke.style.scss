@@ -1,0 +1,11 @@
+.joke {
+    display: flex;
+    align-items: center;
+    max-width: 120rem;
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+    @media screen and (min-width: 1100px) {
+        flex-direction: row;
+    }
+}
